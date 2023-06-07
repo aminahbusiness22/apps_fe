@@ -15,7 +15,7 @@ function App() {
   const [employeeList, setEmployeeList] = useState([]);
 
   const addemployee = () =>(
-   axios.post('http://localhost:3001/create',{
+   axios.post('http://13.231.251.241:3000/create',{
      name: name,
      age: age,
      position: position,
@@ -37,13 +37,13 @@ function App() {
 
 
   const showemployees = () =>(
-    axios.get('http://localhost:3001/employees',{}).then((respons)=> {
+    axios.get('http://13.231.251.241:3000/employees',{}).then((respons)=> {
      setEmployeeList(respons.data);
    })
   );
 
   const updateEmployeewage =(id) =>{
-    axios.put('http://localhost:3001/update',{wage:newwage, id:id}).then((respons)=>
+    axios.put('http://13.231.251.241:3000/update',{wage:newwage, id:id}).then((respons)=>
     {
      setEmployeeList(employeeList.map((val)=>{
        return val.id == id ?{id:val.id, name: val.name, country: val.country, position: val.position, age: val.age, wage: newwage}: val
