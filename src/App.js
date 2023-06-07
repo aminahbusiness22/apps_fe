@@ -88,7 +88,7 @@ function App() {
               } 
            />
 
-           <label>Wage(year) :</label>
+           <label>Tahun :</label>
            <input type="number"
               onChange={(event)=>{
                 setWage(event.target.value);
