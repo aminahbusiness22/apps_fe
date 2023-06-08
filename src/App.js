@@ -55,6 +55,7 @@ function App() {
   return (
     <div className="App">
       <div className="information">
+      <h1>Politeknik Elektronika Negeri Surabaya</h1>
            <h1>Employees Details</h1>
 
            <label>Name :</label>
